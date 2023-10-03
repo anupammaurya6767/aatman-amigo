@@ -1,7 +1,7 @@
 # constants.py
 
 # URL for WhatsApp Web
-WHATSAPP_WEB_URL = "https://web.whatsapp.com/"
+INSTA_WEB_URL = "https://www.instagram.com/"
 
 # File paths for WebDriver executables
 CHROME_DRIVER_PATH = "drivers/chromedriver.exe"
