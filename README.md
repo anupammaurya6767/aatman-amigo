@@ -1,40 +1,79 @@
-# Aatman Amigo
-Insta_api<br />
-├── 📁 api/<br/>
-│ ├── 📄 whatsapp_api.py # Main API script<br/>
-│ └── 📄 init.py<br/>
-│
-├── 📁 drivers/<br/>
-│ ├── ⚙️ chromedriver.exe # Chrome WebDriver executable (or appropriate for your browser)<br/>
-│ └── ⚙️ geckodriver.exe # Gecko WebDriver executable for Firefox (if using Firefox)<br/>
-│
-├── 📁 utils/<br/>
-│ ├── 📄 constants.py # Constants and configuration settings<br/>
-│ ├── 📄 helpers.py # Helper functions for interacting with WhatsApp Web<br/>
-│ └── 📄 init.py<br/>
-│
-├── 📁 features/<br/>
-│ ├── 📁 login/<br/>
-│ │ ├── 📄 login_whatsapp.py # Module for logging into WhatsApp Web<br/>
-│ │ └── 📄 init.py<br/>
-│ │
-│ ├── 📁 send/<br/>
-│ │ ├── 📄 send_message.py # Module for sending text messages<br/>
-│ │ ├── 📄 send_image.py # Module for sending images<br/>
-│ │ ├── 📄 send_video.py # Module for sending videos<br/>
-│ │ └── 📄 init.py<br/>
-│ │
-│ ├── 📁 receive/<br/>
-│ │ ├── 📄 receive_message.py # Module for receiving and processing messages<br/>
-│ │ └── 📄 init.py<br/>
-│ │
-│ └── ... (other feature modules)<br/>
-│
-├── 📄 requirements.txt # List of required Python packages<br/>
-│
-├── 📄 main.py # Main script to run the Insta API<br/>
-│
-└── 📄 sample_usage.py # Sample script to use the Insta API<br/>
+# 🌟 Aatman-Amigo Instagram API 🌟
 
+<p align="center">
+  <img src="https://your-project-logo-url.com" alt="Aatman-Amigo Instagram API Logo">
+</p>
 
-This structured project organization should help you manage different aspects of your Instagram API more effectively. Each module inside the `features` directory can handle specific functionalities like sending messages, images, videos, receiving messages, and logging in. You can develop and maintain these modules separately, making your codebase more organized and maintainable.
+<p align="center">
+  <a href="#Overview">Overview</a> •
+  <a href="#Features">Features</a> •
+  <a href="#Usage">Usage</a> •
+  <a href="#Installation">Installation</a> •
+  <a href="#Contributing">Contributing</a> •
+  <a href="#License">License</a>
+</p>
+
+## Overview 👤
+
+Welcome to **Aatman-Amigo Instagram API**, your gateway to automate Instagram interactions with ease. This API empowers you to harness the capabilities of Instagram in your projects effortlessly.
+
+<p align="center">
+  <img src="https://your-project-screenshot-url.com" alt="Aatman-Amigo Instagram API Screenshot">
+</p>
+
+Unleash the power of automation as you explore the features and possibilities of the **Aatman-Amigo Instagram API**.
+
+## Features ✨
+
+🚀 **Instagram Automation**: Automate various Instagram actions, including sending messages, posting images, and more.
+
+📷 **Media Sharing**: Share images, videos, and stickers programmatically on Instagram.
+
+📜 **Message Handling**: Send and receive messages, manage conversations, and interact with users.
+
+🔧 **Customization**: Tailor the API to fit your specific project needs with ease.
+
+## Usage 📱
+
+1. Install **Aatman-Amigo Instagram API** in your Python project.
+
+2. Initialize the API and authenticate with Instagram.
+
+3. Automate Instagram tasks, such as sending messages, posting media, and more.
+
+4. Explore advanced features and customization options to suit your project requirements.
+
+<p align="center">
+  <img src="https://your-project-demo-gif-url.com" alt="Aatman-Amigo Instagram API Demo">
+</p>
+
+## Installation 🧙‍♂️
+
+1. Install Aatman-Amigo Instagram API via pip:
+   ```bash
+   pip install aatman-amigo-instagram-api
+   ```
+
+2. Include Aatman-Amigo Instagram API in your Python project:
+   ```python
+   from aatman_amigo_instagram_api import InstagramAPI
+
+   # Initialize the API
+   instagram_api = InstagramAPI()
+
+   # Use the API to automate Instagram actions
+   ```
+
+## Contributing 🌟
+
+Contributions are welcome! Feel free to open issues and pull requests to enhance the API's functionality.
+
+## License 📜
+
+This project is licensed under the **Instagram API License**. See the [LICENSE](LICENSE) file for details.
+
+<p align="center">
+  <img src="https://your-project-license-url.com" alt="API License Seal">
+</p>
+
+Unlock the potential of Instagram automation in your projects with **Aatman-Amigo Instagram API**!
