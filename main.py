@@ -1,39 +1,42 @@
-# main.py
+from api.insta_api import AatmanAmigo
 
-from selenium import webdriver
-from features.login.login_whatsapp import WhatsAppLogin
-from features.send.send_message import send_text_message
-from features.send.send_image import send_image
-from features.send.send_video import send_video
-from features.receive.receive_message import receive_messages
+# Your Instagram credentials
+username = "your_username"
+password = "your_password"
 
-def main():
-    try:
-        # Initialize the Chrome WebDriver (you may need to specify the driver path)
-        driver = webdriver.Chrome(executable_path="path/to/chromedriver.exe")
+# Initialize the AatmanAmigo API
+insta_api = AatmanAmigo(driver_path="path/to/chromedriver.exe", username=username, password=password)
 
-        # Initialize WhatsAppLogin and log in
-        whatsapp_login = WhatsAppLogin(driver)
-        whatsapp_login.login()
+try:
+    # Login to Instagram
+    insta_api.login()
 
-        # Example: Send a text message
-        send_text_message(driver, "Contact Name", "Hello, this is a test message!")
+    # Send a message
+    recipient = "recipient_username"
+    message = "Hello, Instagram!"
+    insta_api.send_message(recipient, message)
 
-        # Example: Send an image
-        send_image(driver, "Contact Name", "path/to/image.jpg")
+    # Send an image
+    recipient = "recipient_username"
+    image_path = "path/to/image.jpg"
+    insta_api.send_image(recipient, image_path)
 
-        # Example: Send a video
-        send_video(driver, "Contact Name", "path/to/video.mp4")
+    # Send a sticker
+    recipient = "recipient_username"
+    sticker_url = "https://example.com/your-sticker.png"
+    insta_api.send_sticker(recipient, sticker_url)
 
-        # Example: Receive and process messages (this should run in a separate thread)
-        # Note: You may need to implement more advanced logic for message handling
-        receive_messages(driver)
+    # Send a video
+    recipient = "recipient_username"
+    video_path = "path/to/video.mp4"
+    insta_api.send_video(recipient, video_path)
 
-    except Exception as e:
-        print("An error occurred:", str(e))
-    finally:
-        # Log out and close the browser
-        whatsapp_login.logout()
+    # Receive and print messages
+    insta_api.get_messages(username, password)
 
-if __name__ == "__main__":
-    main()
+except Exception as e:
+    print(f"Error: {str(e)}")
+
+finally:
+    # Close the API
+    insta_api.close()
