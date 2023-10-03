@@ -1,7 +1,7 @@
 # Aatman Amigo
 Insta_api<br />
 ├── 📁 api/<br/>
-│ ├── 📄 whatsapp_api.py # Main API script<br/>
+│ ├── 📄 insta_api.py # Main API script<br/>
 │ └── 📄 init.py<br/>
 │
 ├── 📁 drivers/<br/>
@@ -15,7 +15,7 @@ Insta_api<br />
 │
 ├── 📁 features/<br/>
 │ ├── 📁 login/<br/>
-│ │ ├── 📄 login_whatsapp.py # Module for logging into WhatsApp Web<br/>
+│ │ ├── 📄 login_insta.py # Module for logging into Insta Web<br/>
 │ │ └── 📄 init.py<br/>
 │ │
 │ ├── 📁 send/<br/>
@@ -32,9 +32,8 @@ Insta_api<br />
 │
 ├── 📄 requirements.txt # List of required Python packages<br/>
 │
-├── 📄 main.py # Main script to run the Insta API<br/>
-│
-└── 📄 sample_usage.py # Sample script to use the Insta API<br/>
+└──  📄 main.py # Main script to run the Insta API<br/>
+
 
 
 This structured project organization should help you manage different aspects of your Instagram API more effectively. Each module inside the `features` directory can handle specific functionalities like sending messages, images, videos, receiving messages, and logging in. You can develop and maintain these modules separately, making your codebase more organized and maintainable.
