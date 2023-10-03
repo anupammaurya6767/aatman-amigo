@@ -1,62 +1,34 @@
-# Import necessary libraries
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import NoSuchElementException
-from utils.constants import WHATSAPP_WEB_URL, LOGIN_TIMEOUT_SECONDS
-import time
+from features.login.login_whatsapp import login_insta
+from features.send.send_message import send_message
+from features.send.send_video import send_video
+from features.send.send_image import send_image
+from features.send.send_sticker import send_sticker
+from features.receive.receive_message import receive_message
 
-# Define the WhatsApp API class
-class WhatsAppAPI:
-    def __init__(self):
-        # Initialize the WebDriver (e.g., Chrome)
-        self.driver = webdriver.Chrome()
-        self.driver.get(WHATSAPP_WEB_URL)
-        self.wait_for_login()
+class InstaAPI:
+    def __init__(self, driver_path, username, password):
+        self.driver = webdriver.Chrome(executable_path=driver_path)
+        self.username = username
+        self.password = password
 
-    def wait_for_login(self):
-        # Wait for the user to scan the QR code manually for 10 seconds
-        input("Scan the QR code manually and press Enter after scanning...")
+    def login(self):
+        login_insta(self.driver, self.username, self.password)
 
-    def send_message(self, contact_name, message):
-        # Find the contact by name and send a message
-        contact_element = self.find_contact(contact_name)
-        if contact_element:
-            contact_element.click()
-            message_box = self.find_element_with_retry("//div[@class='_2S1VP copyable-text selectable-text']")
-            if message_box:
-                message_box.click()
-                message_box.send_keys(message)
-                message_box.send_keys(Keys.RETURN)
+    def send_message(self, recipient, message):
+        send_message(self.driver, recipient, message)
 
-    def receive_message(self):
-        # Check for and retrieve incoming messages
-        pass  # Implement this method to receive and process messages
+    def send_video(self, recipient, video_path):
+        send_video(self.driver, recipient, video_path)
 
-    def find_contact(self, contact_name):
-        # Find and click on a contact by name
-        pass  # Implement this method to locate and click on a contact
+    def send_image(self, recipient, image_path):
+        send_image(self.driver, recipient, image_path)
 
-    def find_element_with_retry(self, xpath, max_attempts=3):
-        # Helper function to find an element with retries
-        pass  # Implement this method to find an element with retries
+    def send_sticker(self, recipient, sticker_url):
+        send_sticker(self.driver, recipient, sticker_url)
 
-    def logout(self):
-        # Log out of WhatsApp Web
+    def receive_messages(self):
+        return receive_message(self.driver)
+
+    def close(self):
         self.driver.quit()
-
-# Main execution
-if __name__ == "__main__":
-    # Initialize the WhatsApp API
-    whatsapp = WhatsAppAPI()
-
-    # Example: Send a message
-    whatsapp.send_message("contact_name", "Hello, this is a test message!")
-
-    # Example: Receive and process incoming messages
-    while True:
-        incoming_message = whatsapp.receive_message()
-        if incoming_message:
-            print(f"Received message: {incoming_message}")
-            # Process the message as needed
-
-    # To log out, call whatsapp.logout()
