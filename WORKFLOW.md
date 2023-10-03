@@ -1,4 +1,4 @@
-# Demon_Connect
+# Demon_Connect1 
 whatsapp_api_project/<br/>
 ├── 📁 api/<br/>
 │ ├── 📄 whatsapp_api.py # Main API script<br/>
@@ -14,6 +14,10 @@ whatsapp_api_project/<br/>
 │ └── 📄 init.py<br/>
 │
 ├── 📁 features/<br/>
+│ ├── 📁 login/<br/>
+│ │ ├── 📄 login_whatsapp.py # Module for logging into WhatsApp Web<br/>
+│ │ └── 📄 init.py<br/>
+│ │
 │ ├── 📁 send/<br/>
 │ │ ├── 📄 send_message.py # Module for sending text messages<br/>
 │ │ ├── 📄 send_image.py # Module for sending images<br/>
@@ -24,34 +28,7 @@ whatsapp_api_project/<br/>
 │ │ ├── 📄 receive_message.py # Module for receiving and processing messages<br/>
 │ │ └── 📄 init.py<br/>
 │ │
-│ ├── 📁 login/<br/>
-│ │ ├── 📄 login_whatsapp.py # Module for logging into WhatsApp Web<br/>
-│ │ └── 📄 init.py<br/>
-│ │
-│ ├── 📁 group/<br/>
-│ │ ├── 📄 create_group.py # Module for creating groups<br/>
-│ │ ├── 📄 group_messaging.py # Module for group messaging<br/>
-│ │ └── 📄 init.py<br/>
-│ │
-│ ├── 📁 media/<br/>
-│ │ ├── 📄 send_media.py # Module for sending media files<br/>
-│ │ ├── 📄 receive_media.py # Module for receiving media files<br/>
-│ │ └── 📄 init.py<br/>
-│ │
-│ ├── 📁 commands/<br/>
-│ │ ├── 📄 command_handler.py # Module for handling user commands<br/>
-│ │ ├── 📄 custom_commands.py # Module for custom user-defined commands<br/>
-│ │ └── 📄 init.py<br/>
-│ │
-│ ├── 📁 moderation/<br/>
-│ │ ├── 📄 filter_messages.py # Module for message filtering and moderation<br/>
-│ │ ├── 📄 auto_responses.py # Module for auto-responses<br/>
-│ │ └── 📄 init.py<br/>
-│ │
-│ └── 📁 user_management/<br/>
-│ ├── 📄 manage_contacts.py # Module for managing contacts<br/>
-│ ├── 📄 update_profile.py # Module for updating user profiles<br/>
-│ └── 📄 init.py<br/>
+│ └── ... (other feature modules)<br/>
 │
 ├── 📄 requirements.txt # List of required Python packages<br/>
 │
