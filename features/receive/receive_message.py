@@ -1,39 +1,35 @@
 # receive_message.py
+import requests
+import json
 
-import time
-from selenium.webdriver.common.by import By
-from utils.helpers import find_element_with_retry
+def get_messages(username, password):
+    url = "https://i.instagram.com/api/v1/direct_v2/inbox/"
 
-def receive_messages(driver):
-    """
-    Receive and process incoming messages on WhatsApp Web.
+    headers = {
+        "user-agent": "Instagram 126.0.0.25.122 Android (24/7.0; 640dpi; 144.0 L; samsung; SM-G935F; herolte; samsungexynos8890) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.116 Mobile Safari/537.36",
+        "accept-language": "en-US",
+        "accept-encoding": "gzip, deflate, br",
+        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "cookie": f"sessionid={username}",
+    }
 
-    :param driver: WebDriver instance
-    """
-    while True:
-        try:
-            # Find all message elements in the chat
-            message_elements = driver.find_elements(By.XPATH, "//div[@class='copyable-text']")
+    data = {
+        "password": password,
+        "username": username,
+    }
 
-            for message_element in message_elements:
-                message_text = message_element.text
-                # Process the message text as needed (e.g., reply, store, analyze)
+    response = requests.post(url, headers=headers, data=data)
 
-            # Wait briefly before checking for new messages again
-            time.sleep(2)
-        except Exception as e:
-            print(f"An error occurred while receiving messages: {str(e)}")
+    if response.status_code == 200:
+        json_response = json.loads(response.text)
+        inbox = json_response["inbox"]
+        threads = inbox["threads"]
 
-# Example usage
-if __name__ == "__main__":
-    from selenium import webdriver
+        for thread in threads:
+            items = thread["items"]
 
-    # Initialize the WebDriver (e.g., Chrome)
-    driver = webdriver.Chrome()
-    driver.get("https://web.whatsapp.com/")
+            for item in items:
+                if "text" in item:
+                    print(f"{thread['users'][0]['username']}: {item['text']}")
 
-    # Wait for the user to scan the QR code manually for 10 seconds
-    input("Scan the QR code manually and press Enter after scanning...")
-
-    # Call the receive_messages function to start monitoring messages
-    receive_messages(driver)
+# get_messages("your_username", "your_password")
