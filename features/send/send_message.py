@@ -5,15 +5,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
 
-def send_image(driver, recipient, image_path):
+ def send_message(driver, recipient, message):
         try:
-            driver.get(f'https://www.instagram.com/direct/t/{recipient}/')
+            driver.get(f"https://www.instagram.com/{recipient}/")
             time.sleep(2)
-            input_element = driver.find_element_by_xpath('//input[@accept="image/*"]')
-            input_element.send_keys(image_path)
+            driver.find_element_by_xpath("//a[contains(@href,'/direct/t/')]").click()
             time.sleep(2)
-            submit_button = driver.find_element_by_xpath('//button[@type="submit"]')
+            textarea_element = driver.find_element_by_xpath("//textarea[@placeholder='Message...']")
+            textarea_element.send_keys(message)
+            submit_button = driver.find_element_by_xpath("//button[contains(@type,'submit')]")
             submit_button.click()
-            return "Image sent successfully."
+            return "Message sent successfully."
         except Exception as e:
-            return f"Error sending image: {str(e)}"
+            return f"Error sending message: {str(e)}"
