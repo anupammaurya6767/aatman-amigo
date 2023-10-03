@@ -56,10 +56,11 @@ Unleash the power of automation as you explore the features and possibilities of
 
 2. Include Aatman-Amigo Instagram API in your Python project:
    ```python
-   from aatman_amigo_instagram_api import InstagramAPI
+   from api.insta_api import AatmanAmigo
 
-   # Initialize the API
-   instagram_api = InstagramAPI()
+   insta_api = AatmanAmigo(driver_path="path/to/chromedriver.exe", username=username, password=password)
+
+   insta_api.login()
 
    # Use the API to automate Instagram actions
    ```
