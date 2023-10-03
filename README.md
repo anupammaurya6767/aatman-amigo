@@ -1,7 +1,7 @@
 # 🌟 Aatman-Amigo Instagram API 🌟
 
 <p align="center">
-  <img src="https://your-project-logo-url.com" alt="Aatman-Amigo Instagram API Logo">
+  <img src="https://github.com/anupammaurya6767/aatman-amigo/blob/main/assets/aatman.png">
 </p>
 
 <p align="center">
