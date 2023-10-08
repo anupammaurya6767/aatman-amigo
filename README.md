@@ -18,7 +18,7 @@
 Welcome to **Aatman-Amigo Instagram API**, your gateway to automate Instagram interactions with ease. This API empowers you to harness the capabilities of Instagram in your projects effortlessly.
 
 <p align="center">
-  <img src="https://your-project-screenshot-url.com" alt="Aatman-Amigo Instagram API Screenshot">
+  <img src="https://github.com/anupammaurya6767/aatman-amigo/blob/main/assets/screenshot.jpeg" alt="Aatman-Amigo Instagram API Screenshot">
 </p>
 
 Unleash the power of automation as you explore the features and possibilities of the **Aatman-Amigo Instagram API**.
