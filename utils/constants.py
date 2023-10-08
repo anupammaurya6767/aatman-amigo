@@ -4,7 +4,7 @@
 INSTA_WEB_URL = "https://www.instagram.com/"
 
 # File paths for WebDriver executables
-CHROME_DRIVER_PATH = "drivers/chromedriver.exe"
+DRIVER_PATH = "drivers/chromedriver.exe"
 GECKO_DRIVER_PATH = "drivers/geckodriver.exe"
 
 # Timeout settings
