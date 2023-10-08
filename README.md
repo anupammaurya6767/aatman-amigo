@@ -58,7 +58,7 @@ Unleash the power of automation as you explore the features and possibilities of
    ```python
    from api.insta_api import AatmanAmigo
 
-   insta_api = AatmanAmigo(driver_path="path/to/chromedriver.exe", username=username, password=password)
+   insta_api = AatmanAmigo()
 
    insta_api.login()
 
