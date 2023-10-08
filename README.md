@@ -44,7 +44,7 @@ Unleash the power of automation as you explore the features and possibilities of
 4. Explore advanced features and customization options to suit your project requirements.
 
 <p align="center">
-  <img src="https://your-project-demo-gif-url.com" alt="Aatman-Amigo Instagram API Demo">
+  <img src="https://github.com/anupammaurya6767/aatman-amigo/blob/main/assets/main.png" alt="Aatman-Amigo Instagram API Demo">
 </p>
 
 ## Installation 🧙‍♂️
@@ -74,7 +74,7 @@ Contributions are welcome! Feel free to open issues and pull requests to enhance
 This project is licensed under the **Instagram API License**. See the [LICENSE](LICENSE) file for details.
 
 <p align="center">
-  <img src="https://your-project-license-url.com" alt="API License Seal">
+  <img src="https://github.com/anupammaurya6767/aatman-amigo/blob/main/assets/lic.png" alt="API License Seal">
 </p>
 
 Unlock the potential of Instagram automation in your projects with **Aatman-Amigo Instagram API**!
