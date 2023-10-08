@@ -60,7 +60,7 @@ Unleash the power of automation as you explore the features and possibilities of
 
    insta_api = AatmanAmigo()
 
-   insta_api.login()
+   insta_api.login(username=username, password=password)
 
    # Use the API to automate Instagram actions
    ```
