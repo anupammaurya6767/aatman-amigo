@@ -1,38 +1,24 @@
-from api.insta_api import AatmanAmigo
-
-# Your Instagram credentials
-username = "your_username"
-password = "your_password"
+from api.insta_api import InstaAPI
+from utils.constants import username, password
 
 # Initialize the AatmanAmigo API
-insta_api = AatmanAmigo(driver_path="path/to/chromedriver.exe", username=username, password=password)
+# insta_api = InstaAPI(driver_path="path/to/chromedriver.exe", username=username, password=password)
+insta_api = InstaAPI()
 
 try:
     # Login to Instagram
-    insta_api.login()
+    insta_api.login(username=username, password=password)
 
     # Send a message
-    recipient = "recipient_username"
+    recipient = "your recipient"
     message = "Hello, Instagram!"
     insta_api.send_message(recipient, message)
 
     # Send an image
-    recipient = "recipient_username"
-    image_path = "path/to/image.jpg"
+    recipient = "tanjiro_0_3"
+    image_path = "/Users/aditya/Downloads/d.png"
     insta_api.send_image(recipient, image_path)
 
-    # Send a sticker
-    recipient = "recipient_username"
-    sticker_url = "https://example.com/your-sticker.png"
-    insta_api.send_sticker(recipient, sticker_url)
-
-    # Send a video
-    recipient = "recipient_username"
-    video_path = "path/to/video.mp4"
-    insta_api.send_video(recipient, video_path)
-
-    # Receive and print messages
-    insta_api.get_messages(username, password)
 
 except Exception as e:
     print(f"Error: {str(e)}")
