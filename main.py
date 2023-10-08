@@ -2,8 +2,7 @@ from api.insta_api import AatmanAmigo
 from utils.constants import username, password
 
 # Initialize the AatmanAmigo API
-insta_api = AatmanAmigo(driver_path="path/to/chromedriver.exe")
-# insta_api = AatmanAmigo()
+insta_api = AatmanAmigo()
 
 try:
     # Login to Instagram
