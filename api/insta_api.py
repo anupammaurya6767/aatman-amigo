@@ -4,7 +4,7 @@ from features.login.login_insta import login
 from features.send.send_message import send_message
 
 
-class InstaAPI:
+class AatmanAmigo:
     def __init__(self):
         self.driver = webdriver.Chrome(executable_path="driver_path")
 
