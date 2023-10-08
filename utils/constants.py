@@ -14,3 +14,7 @@ SEND_MESSAGE_TIMEOUT_SECONDS = 5
 # API keys and tokens (if applicable)
 API_KEY = "your_api_key_here"
 API_SECRET = "your_api_secret_here"
+
+# Instagram credentials
+username = "your_username"
+password = "your password"
