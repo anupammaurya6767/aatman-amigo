@@ -7,7 +7,7 @@ from utils.constants import DRIVER_PATH
 
 class AatmanAmigo:
     def __init__(self):
-        self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+        self.driver = webdriver.Chrome(DRIVER_PATH)
 
     def login(self, username, password):
         
