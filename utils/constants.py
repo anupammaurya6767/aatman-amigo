@@ -1,10 +1,10 @@
 # constants.py
 
-# URL for WhatsApp Web
+# URL for Insta Web
 INSTA_WEB_URL = "https://www.instagram.com/"
 
 # File paths for WebDriver executables
-DRIVER_PATH = "drivers/chromedriver.exe"
+DRIVER_PATH = "/opt/homebrew/bin/chromedriver"
 GECKO_DRIVER_PATH = "drivers/geckodriver.exe"
 
 # Timeout settings
@@ -16,5 +16,6 @@ API_KEY = "your_api_key_here"
 API_SECRET = "your_api_secret_here"
 
 # Instagram credentials
-username = "your_username"
-password = "your password"
+username = ":-)"
+password = ":-)"
+
